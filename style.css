@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+span {
+  display: inline-grid;
+  margin: 2em auto;
+  grid-template-columns: repeat(10, 3em);
+  grid-template-rows: repeat(10, 3em);
+  gap: 1px;
+  background-color: #000;
+  border: 1PX solid #000;
+}
+
+div {
+    background-color: #fff;
+    line-height: 3em;
+}
+
+
+/* select items 41-50 */
+/* div:nth-of-type(n+41):not(div:nth-of-type(n+51)) */
+
+/* all items that are 6th or lower */
+/* div:not(div:nth-of-type(6) ~ div) */
+
+/* selected cell and all before it */
+/* span:hover > div:not(div:hover ~ div) */
+
+/* selected cell and all after it in it's row */
+div:hover ~ div:not(div:hover ~ div:nth-of-type(10n) ~ div)
+{
+    font-weight: 700;
+    color: lime;
+}
